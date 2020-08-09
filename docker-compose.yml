@@ -1,0 +1,36 @@
+version: "2"
+
+volumes:
+  mongo_data: {}
+
+services:
+  nodejs:
+      build: .
+      environment:
+        - NODE_ENV=development
+        - APP_NAME="TPN NodeJs Boilerplate API" 
+        - APP_PORT=8080
+        - APP_TIMEOZNE='Etc/GMT-7'
+        - MONGO_URL=mongodb://root:qwerty123456@localhost:27017/playground?authSource=admin
+      user: root
+      networks:
+        - webnettest
+      ports:
+        - 3010:8080
+      depends_on:
+        - mongodb
+  mongodb:
+      image: 'telkomindonesia/alpine:mongodb-3.6'
+      networks:
+        - webnettest
+      environment:
+        - MONGODB_USER=user
+        - MONGODB_PASSWORD=qwerty123456
+        - MONGODB_ADMIN_PASSWORD=qwerty123456
+        - MONGODB_DATABASE=playground
+      ports:
+        - 27018:27017
+      volumes:
+        - mongo_data:/data/db
+networks:
+    webnettest:

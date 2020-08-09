@@ -1,0 +1,46 @@
+{
+    "env"           : "NODE_ENV",
+    "app" : {
+        "name"      : "APP_NAME",
+        "url"       : "APP_URL",
+        "port"      : "APP_PORT",
+        "timezone"  : "APP_TIMEOZNE",
+        "notif"     : "APP_NOTIF"
+    },
+    "db" : {
+        "mongoUrl"    : "MONGO_URL"
+    },
+    "filesystem" : {
+        "driver"    : "FS_DRIVER",
+        "key"       : "FS_KEY",
+        "secret"    : "FS_SECRET",
+        "region"    : "FS_REGION",
+        "endpoint"  : "FS_ENDPOINT",
+        "bucket"    : "FS_BUCKET",
+        "port"      : "FS_PORT"
+    },
+    "logstash":{
+        "port": "LOGSTASH_PORT",
+        "host": "LOGSTASH_HOST"
+    },
+    "minio":{
+        "avaendpoint":"MINIO_AVAENDPOINT",
+        "avabucket":"MINIO_AVABUCKET",
+        "avapath"  :"MINIO_AVAPATH",
+        "ssl"     : "MINIO_SSL",
+        "port"    :"MINIO_PORT",
+        "accesskey":"MINIO_ACCESSKEY",
+        "secretkey":"MINIO_SECRETKEY"
+    },
+    "optimus":{
+        "endpoint" : "OPTIMUS_ENDPOINT",
+        "user": "OPTIMUS_USER",
+        "secret": "OPTIMUS_SECRET"
+    },
+    "api_gateway": {
+        "endpoint" : "API_GATEWAY_ENDPOINT",
+        "adminEndpoint" : "API_GATEWAY_ADMIN_ENDPOINT",
+        "client_id" : "API_GATEWAY_CLIENT_ID",
+        "secret" : "API_GATEWAY_SECRET"
+    }
+}
